@@ -1,7 +1,7 @@
-package be.kdg.procesor;
+package be.kdg.simulator;
 
-import be.kdg.procesor.generators.FileGenerator;
-import be.kdg.procesor.generators.MessageGenerator;
+import be.kdg.simulator.generators.FileGenerator;
+import be.kdg.simulator.generators.MessageGenerator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,7 +13,9 @@ public class GeneratorConfig {
     //kan aangepast worden tussen de haakjes
     //Eerste mogelijkheid gebreik @qualifier
     //tweede boven commandline Messaenger extra @ConditionalProperty
+
     /*@Bean("fileGenerator")
+    @ConditionalOnProperty(name="generator.type",havingValue = "file")
     public MessageGenerator fileGenerator() {
         return new FileGenerator();
     }*/

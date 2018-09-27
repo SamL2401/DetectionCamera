@@ -1,18 +1,19 @@
 package be.kdg.simulator.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class CameraMessage {
     private int id;
     private String licensePlate;
-    private LocalDate timestamp;
+    private LocalDateTime timestamp;
 
     public CameraMessage() {
 
     }
 
-    public CameraMessage(int id, String licensePlate, LocalDate timestamp) {
+    public CameraMessage(int id, String licensePlate, LocalDateTime timestamp) {
         this.id = id;
         this.licensePlate = licensePlate;
         this.timestamp = timestamp;
@@ -34,11 +35,11 @@ public class CameraMessage {
         this.licensePlate = licensePlate;
     }
 
-    public LocalDate getTimestamp() {
+    public LocalDateTime getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(LocalDate timestamp) {
+    public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
     }
 

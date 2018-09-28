@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 //oplossen met
 // a) @Qualifier  in de source
 // b) @ConditionalOnProperty  in de application.properties
-
+@ConditionalOnProperty(name = "messenger.type", havingValue = "cmdline")
 public class CommandLineMessenger implements Messenger {
     //!!!!!!cyclic dependency error: kan door constructor injection samen met field oplossing: er moet field injection gebruikt worden op een van de twee beans
     private final MessageGenerator messageGenerator;

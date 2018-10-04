@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+
 public class CameraMessage {
     private int id;
     private String licensePlate;

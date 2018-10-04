@@ -10,6 +10,11 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.scheduling.annotation.Schedules;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
+import java.io.StringWriter;
+import java.io.Writer;
+
+
 @Component
 @ConditionalOnProperty(name = "messenger.type", havingValue = "queue")
 public class QueuMessenger implements Messenger {
@@ -43,6 +48,10 @@ public class QueuMessenger implements Messenger {
     @Scheduled(fixedDelayString = "${frequentie.val}")
     public void sendMessage() {
         CameraMessage message = messageGenerator.generate();
+        //uitwerken voor doorsturen uml
+        Writer writer = new StringWriter();
+
+
         if (message == null)
             System.exit(0);
         template.convertAndSend(queue.getName(), message.toString());

@@ -1,7 +1,6 @@
 package be.kdg.procesor;
 
-import be.kdg.procesor.generators.FileGenerator;
-import be.kdg.procesor.generators.MessageGenerator;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

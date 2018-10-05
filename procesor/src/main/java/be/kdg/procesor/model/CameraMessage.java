@@ -1,6 +1,5 @@
 package be.kdg.procesor.model;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -57,6 +56,7 @@ public class CameraMessage {
     public int hashCode() {
         return Objects.hash(id, licensePlate, timestamp);
     }
+
     // TODO: datum formateren volgens  dd-MM-yyyy
     @Override
     public String toString() {

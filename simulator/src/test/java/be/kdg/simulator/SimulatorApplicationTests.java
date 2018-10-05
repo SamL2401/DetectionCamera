@@ -25,6 +25,7 @@ public class SimulatorApplicationTests {
         Assert.assertTrue(cameraMessage.getLicensePlate().matches("^[1-9]-[A-Z]{3}-[0-9]{3}$"));
 
     }
+
     @Test
     public void contextLoads() {
     }

@@ -1,8 +1,5 @@
 package be.kdg.simulator;
 
-import be.kdg.simulator.generators.FileGenerator;
-import be.kdg.simulator.generators.MessageGenerator;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration

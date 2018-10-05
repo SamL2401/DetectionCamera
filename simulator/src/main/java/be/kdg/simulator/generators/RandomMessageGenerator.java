@@ -1,6 +1,8 @@
 package be.kdg.simulator.generators;
 
 import be.kdg.simulator.model.CameraMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
@@ -9,15 +11,17 @@ import java.time.LocalDateTime;
 import java.util.Random;
 
 @Component
-@ConditionalOnProperty(name="generator.type",havingValue = "random")
+@ConditionalOnProperty(name = "generator.type", havingValue = "random")
 public class RandomMessageGenerator implements MessageGenerator {
+    private static final Logger LOGGER = LoggerFactory.getLogger(FileGenerator.class);
+
     @Value("${aantalCameras.val}")
     private int cameraMax;
     private String licensePlate = "";
 
     Random rand = new Random();
 
-    private String randomLicense(){
+    private String randomLicense() {
         StringBuilder s = new StringBuilder("1-");
         /*
         s.append(rand.nextInt(9)+1);
@@ -34,9 +38,11 @@ public class RandomMessageGenerator implements MessageGenerator {
         }
         return s.toString();
     }
+
     @Override
     public CameraMessage generate() {
-        return new CameraMessage(rand.nextInt(cameraMax)+1,randomLicense(), LocalDateTime.now());
+        LOGGER.debug("Random message generated");
+        return new CameraMessage(rand.nextInt(cameraMax) + 1, randomLicense(), LocalDateTime.now());
     }
 
 

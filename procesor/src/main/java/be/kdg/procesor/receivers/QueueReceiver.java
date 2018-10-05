@@ -2,16 +2,19 @@ package be.kdg.procesor.receivers;
 
 import be.kdg.procesor.model.CameraMessage;
 import be.kdg.procesor.offenses.Offense;
-
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.time.format.DateTimeFormatter;
 
 @Component
 @RabbitListener(queues = "camera-queue")
@@ -23,21 +26,23 @@ public class QueueReceiver {
         this.offense = offense;
     }
 
+
     @RabbitHandler
     public void receive(String in) throws InterruptedException {
-        CameraMessage cameraMessage = new CameraMessage();
-        // String uitwerken naar CameraMessage
-        Pattern pattern = Pattern.compile(" ([0-9]*) (.*) (.*)$");
-        Matcher matcher = pattern.matcher(in);
-        if (matcher.find())
-        {
-            cameraMessage.setId(Integer.parseInt(matcher.group(1)));
-            cameraMessage.setLicensePlate(matcher.group(2));
-            cameraMessage.setTimestamp(LocalDateTime.parse(matcher.group(3)));
-            LOGGER.trace(cameraMessage.toString());
-        } else LOGGER.error("mather not found");
+        XmlMapper mapper = new XmlMapper();
+        JavaTimeModule javaTimeModule = new JavaTimeModule();
+        javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(DateTimeFormatter.ISO_DATE_TIME));
+        mapper.registerModule(javaTimeModule);
+        mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
 
-        offense.detect(cameraMessage);
-        Thread.sleep(3000);
+        try {
+            CameraMessage cameraMessage = mapper.readValue(in, CameraMessage.class);
+            LOGGER.info("Message received: " + cameraMessage);
+            offense.detect(cameraMessage);
+        } catch (IOException e) {
+            LOGGER.error("Failed to parse queue message to xml");
+        }
+
+        Thread.sleep(1000);
     }
 }

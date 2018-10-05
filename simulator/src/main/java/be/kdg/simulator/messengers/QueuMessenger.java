@@ -49,9 +49,24 @@ public class QueuMessenger implements Messenger {
     public void sendMessage() {
         CameraMessage message = messageGenerator.generate();
         //uitwerken voor doorsturen uml
-        Writer writer = new StringWriter();
+        /*@Override
+        public void sendMessage(CameraMessage cameraMessage) {
+            LOGGER.info("Sending message to the RabbitMq queue: " + cameraMessage.toString() + " to the " + queue.getName());
+            XmlMapper mapper = new XmlMapper();
+            JavaTimeModule javaTimeModule = new JavaTimeModule();
+            javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(DateTimeFormatter.ISO_DATE_TIME));
+            mapper.registerModule(javaTimeModule);
+            mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
 
+            try {
+                String cameraMessageXml = mapper.writeValueAsString(cameraMessage);
+                template.convertAndSend(queue.getName(), cameraMessageXml);
+            } catch (JsonProcessingException e) {
+                LOGGER.error("error converting camera message as XML!");
+            }
+        }
 
+*/
         if (message == null)
             System.exit(0);
         template.convertAndSend(queue.getName(), message.toString());

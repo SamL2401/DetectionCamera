@@ -25,6 +25,7 @@ repositories {
 
 
 dependencies {
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.9.4'
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-amqp')
     compile('com.opencsv:opencsv:4.2')

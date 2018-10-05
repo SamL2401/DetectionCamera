@@ -2,6 +2,7 @@ package be.kdg.procesor.receivers;
 
 import be.kdg.procesor.model.CameraMessage;
 import be.kdg.procesor.offenses.Offense;
+import be.kdg.procesor.services.CameraServiceUtility;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -20,10 +21,13 @@ import java.time.format.DateTimeFormatter;
 @RabbitListener(queues = "camera-queue")
 public class QueueReceiver {
     private static final Logger LOGGER = LoggerFactory.getLogger(QueueReceiver.class);
+
+    private final CameraServiceUtility cameraServiceUtility;
     private Offense offense;
 
-    public QueueReceiver(Offense offense) {
+    public QueueReceiver(Offense offense,CameraServiceUtility cameraServiceUtility) {
         this.offense = offense;
+        this.cameraServiceUtility = cameraServiceUtility;
     }
 
 

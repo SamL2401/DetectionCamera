@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 import java.util.Random;
 
 @Component
@@ -17,6 +18,8 @@ public class RandomMessageGenerator implements MessageGenerator {
 
     @Value("${aantalCameras.val}")
     private int cameraMax;
+    @Value("${frequentie.val}")
+    private int sleep;
     private String licensePlate = "";
 
     Random rand = new Random();
@@ -40,9 +43,15 @@ public class RandomMessageGenerator implements MessageGenerator {
     }
 
     @Override
-    public CameraMessage generate() {
-        LOGGER.debug("Random message generated");
-        return new CameraMessage(rand.nextInt(cameraMax) + 1, randomLicense(), LocalDateTime.now());
+    public Optional<CameraMessage> generate() {
+        try {
+            Thread.sleep(sleep);
+            LOGGER.debug("Random message generated");
+            return Optional.of(new CameraMessage(rand.nextInt(cameraMax) + 1, randomLicense(), LocalDateTime.now()));
+        } catch (InterruptedException e) {
+            LOGGER.error(e.getMessage());
+        }
+        return Optional.empty();
     }
 
 

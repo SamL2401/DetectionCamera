@@ -25,7 +25,7 @@ public class QueueReceiver {
     private final CameraServiceUtility cameraServiceUtility;
     private Offense offense;
 
-    public QueueReceiver(Offense offense,CameraServiceUtility cameraServiceUtility) {
+    public QueueReceiver(Offense offense, CameraServiceUtility cameraServiceUtility) {
         this.offense = offense;
         this.cameraServiceUtility = cameraServiceUtility;
     }

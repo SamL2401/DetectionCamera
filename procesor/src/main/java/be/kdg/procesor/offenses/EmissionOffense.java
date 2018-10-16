@@ -1,16 +1,12 @@
 package be.kdg.procesor.offenses;
 
 import be.kdg.procesor.model.CameraMessage;
-import be.kdg.procesor.model.cameras.DetectionCamera;
-import be.kdg.procesor.model.cars.LicensePlate;
 import be.kdg.sa.services.CameraServiceProxy;
 import be.kdg.sa.services.LicensePlateServiceProxy;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
-import java.io.IOException;
 
 @Component
 public class EmissionOffense implements Offense {

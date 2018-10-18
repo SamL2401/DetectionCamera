@@ -42,6 +42,6 @@ public class QueueReceiver implements Receiver{
         } catch (IOException e) {
             LOGGER.error("Failed to parse queue xml to message");
         }
-        Thread.sleep(1000);
+        Thread.sleep(10000000);
     }
 }

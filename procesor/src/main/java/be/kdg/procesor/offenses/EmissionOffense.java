@@ -1,14 +1,17 @@
 package be.kdg.procesor.offenses;
 
+import be.kdg.procesor.model.cameras.DetectionCamera;
 import be.kdg.procesor.model.messages.CameraMessage;
 import be.kdg.sa.services.CameraServiceProxy;
 import be.kdg.sa.services.LicensePlateServiceProxy;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 @Component
+@ConditionalOnProperty(name = "offense.type", havingValue = "emission")
 public class EmissionOffense implements Offense {
     private final Logger LOGGER = LoggerFactory.getLogger(EmissionOffense.class);
 
@@ -27,10 +30,8 @@ public class EmissionOffense implements Offense {
         try {
             String camJson = cameraServiceProxy.get(cameraMessage.getId());
             System.out.println(camJson);
-//            DetectionCamera camera = objectMapper.readValue(camJson, DetectionCamera.class);
-//
-//
-//            LOGGER.info("Read camera from service: " + camera);
+            //DetectionCamera camera = objectMapper.readValue(camJson, DetectionCamera.class);
+            //LOGGER.info("Read camera from service: " + camera);
 //
 //            String licensePlateJson = licensePlateServiceProxy.get(cameraMessage.getLicensePlate());
 //
@@ -42,7 +43,6 @@ public class EmissionOffense implements Offense {
 //                        licensePlate.getPlateId(), licensePlate.getEuroNumber(), camera.getEuroNorm());
 //                LOGGER.info("WARNING EURONORM VIOLATION:  " + violation);
 //            }
-            Thread.sleep(2000);
         } catch (Exception e) {
             LOGGER.error("Failed to detect Emission");
         }

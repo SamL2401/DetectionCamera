@@ -1,4 +1,4 @@
-package be.kdg.procesor.model;
+package be.kdg.procesor.model.messages;
 
 import java.time.LocalDateTime;
 import java.util.Objects;

@@ -1,8 +1,11 @@
 package be.kdg.procesor.model.cameras;
 
-public class Location {
-    private double latitute;
-    private double longitute;
+import com.fasterxml.jackson.annotation.JsonAlias;
 
+public class Location {
+    @JsonAlias("long")
+    private double longitude;
+    @JsonAlias("lat")
+    private double latitude;
 
 }

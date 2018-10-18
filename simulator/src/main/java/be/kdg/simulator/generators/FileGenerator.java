@@ -36,7 +36,7 @@ public class FileGenerator implements MessageGenerator {
     public Optional<CameraMessage> generate() {
         CameraMessage cameraMessage;
         Optional<CameraMessage> optionalCameraMessage = Optional.empty();
-        try {// TODO: verander null naar Optional
+        try {
             LOGGER.info("Next line is being parsed");
             String line = br.readLine();
             if (line != null) {

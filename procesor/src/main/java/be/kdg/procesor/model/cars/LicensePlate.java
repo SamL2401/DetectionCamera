@@ -1,8 +1,23 @@
 package be.kdg.procesor.model.cars;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class LicensePlate {
+    @Id
     private String plateId;
+    @Column
     private String nationalNumber;
+    @Column
     private int euroNumber;
 
     public String getPlateId() {
@@ -27,5 +42,14 @@ public class LicensePlate {
 
     public void setEuroNumber(int euroNumber) {
         this.euroNumber = euroNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "LicensePlate{" +
+                "plateId='" + plateId + '\'' +
+                ", nationalNumber='" + nationalNumber + '\'' +
+                ", euroNumber=" + euroNumber +
+                '}';
     }
 }

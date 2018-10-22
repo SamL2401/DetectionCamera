@@ -7,6 +7,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
+/**
+ * This class is responsible for sending CameraMessages to the CommandLine
+ * @author Sam Laureys
+ * @version 1.01
+ */
 @Component
 @ConditionalOnProperty(name = "messenger.type", havingValue = "cmdline")
 public class CommandLineMessenger implements Messenger {

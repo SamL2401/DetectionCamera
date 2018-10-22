@@ -15,6 +15,11 @@ import java.text.ParseException;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+/**
+ * This class is responsible for converting a csv file to CameraMessages
+ * @author Sam Laureys
+ * @version 1.05
+ */
 @Component
 @ConditionalOnProperty(name = "generator.type", havingValue = "file")
 public class FileGenerator implements MessageGenerator {
@@ -51,7 +56,7 @@ public class FileGenerator implements MessageGenerator {
             } else {
                 inputStream.close();
             }
-
+//TODO error handling
         } catch (IOException e) {
             LOGGER.error("MessageFileReaderImpl: Error whilst reading the CSV file");
         } catch (ParseException e) {

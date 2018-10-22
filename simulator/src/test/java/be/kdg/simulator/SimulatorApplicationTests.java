@@ -13,19 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SimulatorApplicationTests {
 
-
-    @Autowired
-    // Beste zelf, Dit is Field Injection
-    private MessageGenerator messageGenerator;
-
-    @Test
-    public void testMessageGenerator() {
-
-        CameraMessage cameraMessage = messageGenerator.generate().get();
-        Assert.assertTrue(cameraMessage.getLicensePlate().matches("^[1-9]-[A-Z]{3}-[0-9]{3}$"));
-
-    }
-
     @Test
     public void contextLoads() {
     }

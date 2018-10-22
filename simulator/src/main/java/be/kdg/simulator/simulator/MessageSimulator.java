@@ -11,6 +11,11 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import java.util.Optional;
 
+/**
+ * This class is responsible for delegating messages from the generator to the messenger
+ * @author Sam Laureys
+ * @version 1.03
+ */
 @Component
 public class MessageSimulator implements Simulator {
     private static final Logger LOGGER = LoggerFactory.getLogger(FileGenerator.class);

@@ -57,7 +57,6 @@ public class CameraMessage {
         return Objects.hash(id, licensePlate, timestamp);
     }
 
-    // TODO: datum formateren volgens  dd-MM-yyyy
     @Override
     public String toString() {
         return String.format("camera Message %d %s %s", id, licensePlate, timestamp);

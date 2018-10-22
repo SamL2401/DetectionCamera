@@ -11,7 +11,11 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
-
+/**
+ * This class is responsible for sending CameraMessages to the Queue
+ * @author Sam Laureys
+ * @version 1.03
+ */
 @Component
 @ConditionalOnProperty(name = "messenger.type", havingValue = "queue")
 public class QueueMessenger implements Messenger {

@@ -11,6 +11,11 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Random;
 
+/**
+ * This class is responsible for creating random CameraMessages
+ * @author Sam Laureys
+ * @version 1.02
+ */
 @Component
 @ConditionalOnProperty(name = "generator.type", havingValue = "random")
 public class RandomMessageGenerator implements MessageGenerator {
@@ -20,16 +25,12 @@ public class RandomMessageGenerator implements MessageGenerator {
     private int cameraMax;
     @Value("${frequentie.val}")
     private int sleep;
-    private String licensePlate = "";
-
-    Random rand = new Random();
+    private Random rand = new Random();
 
     private String randomLicense() {
-        StringBuilder s = new StringBuilder("1-");
-        /*
+        StringBuilder s = new StringBuilder();
         s.append(rand.nextInt(9)+1);
         s.append("-");
-        */
         for (int i = 0; i < 3; i++) {
             char ch = (char) (Math.random() * 26 + 'A');
             s.append(ch);

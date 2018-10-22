@@ -3,7 +3,11 @@ package be.kdg.simulator.model;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-
+/**
+ * This class represents a CameraMessage
+ * @author Sam Laureys
+ * @version 1.01
+ */
 public class CameraMessage {
     private int id;
     private String licensePlate;
@@ -57,7 +61,6 @@ public class CameraMessage {
         return Objects.hash(id, licensePlate, timestamp);
     }
 
-    // TODO: datum formateren volgens  dd-MM-yyyy
     @Override
     public String toString() {
         return String.format("camera Message %d %s %s", id, licensePlate, timestamp);

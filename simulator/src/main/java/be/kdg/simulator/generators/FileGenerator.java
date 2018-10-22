@@ -3,6 +3,7 @@ package be.kdg.simulator.generators;
 import be.kdg.simulator.model.CameraMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
@@ -27,13 +28,15 @@ public class FileGenerator implements MessageGenerator {
 
     private InputStream inputStream;
     private BufferedReader br;
+    @Value("${csvFile.location}")
+    private String csvLocation;
 
     public FileGenerator() {
     }
 
     @PostConstruct
     private void Initialize() {
-        inputStream = getClass().getResourceAsStream("/csvFiles/example.csv");
+        inputStream = getClass().getResourceAsStream(csvLocation);
         br = new BufferedReader(new InputStreamReader(inputStream));
     }
 

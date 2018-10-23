@@ -10,6 +10,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 /**
  * This class handles a ViolationException
+ *
  * @author Sam Laureys
  * @version 1.01
  */

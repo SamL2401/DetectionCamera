@@ -12,6 +12,7 @@ import java.util.Optional;
 
 /**
  * This class is the service layer of the violations
+ *
  * @author Sam Laureys
  */
 @Service

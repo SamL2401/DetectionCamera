@@ -2,10 +2,9 @@ package be.kdg.procesor.detectors.model.cameras;
 
 import lombok.Data;
 
-import javax.persistence.*;
-
 /**
  * This class represents a DetectionCamera
+ *
  * @author Sam Laureys
  */
 @Data

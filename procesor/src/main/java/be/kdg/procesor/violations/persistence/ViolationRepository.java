@@ -8,8 +8,9 @@ import java.util.List;
 
 /**
  * This interface is the repository for all the violations
+ *
  * @author Sam Laureys
  */
-public interface ViolationRepository extends JpaRepository<Violation,Long> {
+public interface ViolationRepository extends JpaRepository<Violation, Long> {
     List<Violation> findAllByTimestampBetween(LocalDateTime start, LocalDateTime end);
 }

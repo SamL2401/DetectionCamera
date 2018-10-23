@@ -5,6 +5,7 @@ import be.kdg.simulator.model.CameraMessage;
 
 /**
  * Interface for Messengers
+ *
  * @author Sam Laureys
  * @version 1.0
  */

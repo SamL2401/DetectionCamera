@@ -1,6 +1,5 @@
 package be.kdg.procesor.detectors.calculators;
 
-import be.kdg.procesor.detectors.offenses.EmissionOffense;
 import be.kdg.procesor.violations.configs.FineCalculatorConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * This class calculates the fine for an offense
+ *
  * @author Sam Laureys
  */
 @Component

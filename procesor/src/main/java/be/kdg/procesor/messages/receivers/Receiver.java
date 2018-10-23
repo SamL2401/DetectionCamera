@@ -2,6 +2,7 @@ package be.kdg.procesor.messages.receivers;
 
 /**
  * Interface for Receivers
+ *
  * @author Sam Laureys
  * @version 1.0
  */

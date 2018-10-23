@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * This class is responsible for sending CameraMessages to the Queue
+ *
  * @author Sam Laureys
  * @version 1.03
  */

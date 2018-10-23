@@ -5,6 +5,7 @@ import org.springframework.context.ApplicationEvent;
 
 /**
  * This class models a CameraMessageEvent as a ApplicationEvent
+ *
  * @author Sam Laureys
  */
 public class CameraMessageEvent extends ApplicationEvent {

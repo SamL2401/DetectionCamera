@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Publishes an CameraMessageEvent So that subscribers can react
+ *
  * @author Sam Laureys
  */
 @Component

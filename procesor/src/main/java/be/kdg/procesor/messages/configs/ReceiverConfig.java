@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * This is a configuration file for the receiver
+ *
  * @author Sam Laureys
  */
 @Configuration
@@ -17,10 +18,12 @@ public class ReceiverConfig {
     public Queue cameraQueue() {
         return new Queue("camera-queue");
     }
+
     @Bean
     public XmlMapper xmlMapper() {
         return new XmlMapper();
     }
+
     @Bean
     public JavaTimeModule javaTimeModule() {
         return new JavaTimeModule();

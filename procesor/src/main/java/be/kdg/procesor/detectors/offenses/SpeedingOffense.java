@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * This class is responsible for detecting an speeding offense
+ *
  * @author Sam Laureys
  * @version 1.0
  */

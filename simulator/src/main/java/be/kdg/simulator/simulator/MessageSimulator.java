@@ -13,6 +13,7 @@ import java.util.Optional;
 
 /**
  * This class is responsible for delegating messages from the generator to the messenger
+ *
  * @author Sam Laureys
  * @version 1.03
  */

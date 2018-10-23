@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * This is a configuration file for the offense handling
+ *
  * @author Sam Laureys
  */
 @Configuration

@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  * This class is responsible for handling the Web calls from settings
+ *
  * @author Sam Laureys
  * @version 1.01
  */

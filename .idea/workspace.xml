@@ -2,38 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d19a8c1d-802f-4465-880d-6bba708c9228" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_xml_bind_jaxb_api_2_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_configuration_processor_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/calculators/FineCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/configs/FineCalculatorConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/controllers/web/SettingsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/model/ViolationType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procesor/src/main/resources/templates/settingsShow.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/ProxyServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/calculators/FineCalculatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/services/ProxyServiceHandlerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/rest/ViolationControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/web/ViolationWebControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/exceptions/CsvFileException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1f5ed314-5150-4a95-8143-4af728148dee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1f5ed314-5150-4a95-8143-4af728148dee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/procesor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/procesor.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/ProcesorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/ProcesorApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/cameras/model/DetectionCamera.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cameras/DetectionCamera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/cameras/model/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cameras/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/cameras/model/Segment.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cameras/Segment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/cars/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cars/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/cars/model/LicensePlate.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cars/LicensePlate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/calculators/FineCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/calculators/FineCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/configs/OffenseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/configs/OffenseConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/configs/ServicesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/configs/ServicesConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cameras/DetectionCamera.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cameras/DetectionCamera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cameras/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cameras/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cameras/Segment.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cameras/Segment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cars/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cars/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cars/LicensePlate.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/model/cars/LicensePlate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/observers/publishers/CameraMessageEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/observers/publishers/CameraMessageEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/observers/publishers/CameraMessagePublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/observers/publishers/CameraMessagePublisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/observers/subscribers/EmissionOffenseSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/observers/subscribers/EmissionOffenseSubscriber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/observers/subscribers/SpeedingOffenseSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/observers/subscribers/SpeedingOffenseSubscriber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/offenses/EmissionOffense.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/offenses/EmissionOffense.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/offenses/SpeedingOffense.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/offenses/SpeedingOffense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/services/CameraServiceUtility.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/services/ProxyServiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/services/ProxyServiceHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/configs/ReceiverConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/configs/ReceiverConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/messageHandlers/XmlToMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/messageHandlers/XmlToMessage.java" afterDir="false" />
@@ -41,23 +25,35 @@
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/receivers/OtherReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/receivers/OtherReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/receivers/QueueReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/receivers/QueueReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/receivers/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/receivers/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/configs/FineCalculatorConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/configs/FineCalculatorConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/configs/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/configs/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/controllers/rest/ViolationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/controllers/rest/ViolationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/controllers/web/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/controllers/web/SettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/controllers/web/ViolationWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/controllers/web/ViolationWebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/dto/ViolationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/dto/ViolationDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/exceptions/ViolationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/exceptions/ViolationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/exceptions/ViolationExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/exceptions/ViolationExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/model/violations/Violation.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/model/Violation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/model/Violation.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/model/Violation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/model/ViolationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/model/ViolationType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/persistence/ViolationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/persistence/ViolationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/services/ViolationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/services/ViolationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procesor/src/main/resources/templates/violationSum.html" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/main/resources/templates/violationSum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/EmissionOffenseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/calculators/FineCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/calculators/FineCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/services/ProxyServiceHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/services/ProxyServiceHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/rest/ViolationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/rest/ViolationControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/web/ViolationWebControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/web/ViolationWebControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/SimulatorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/SimulatorApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/config/MessagingConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/config/MessagingConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/exceptions/CsvFileException.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/exceptions/CsvFileException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/generators/FileGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/generators/FileGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/generators/MessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/generators/MessageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/generators/RandomMessageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/generators/RandomMessageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/messengers/CommandLineMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/messengers/CommandLineMessenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/messengers/Messenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/messengers/Messenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/messengers/QueueMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/messengers/QueueMessenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/model/CameraMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/model/CameraMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/simulator/MessageSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/simulator/MessageSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/simulator/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/simulator/Simulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/toXml/MessageToXml.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/main/java/be/kdg/simulator/toXml/MessageToXml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/src/test/java/be/kdg/simulator/SimulatorApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/src/test/java/be/kdg/simulator/SimulatorApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/simulator/.gradle/" />
     <ignored path="$PROJECT_DIR$/simulator/build/" />
@@ -160,7 +156,7 @@
           <entry key="gradle" value="13" />
           <entry key="html" value="17" />
           <entry key="http" value="2" />
-          <entry key="java" value="497" />
+          <entry key="java" value="498" />
           <entry key="kt" value="1" />
           <entry key="offenses" value="1" />
           <entry key="procesor" value="1" />
@@ -174,7 +170,7 @@
           <entry key="Database Element" value="12" />
           <entry key="Groovy" value="13" />
           <entry key="HTML" value="17" />
-          <entry key="JAVA" value="497" />
+          <entry key="JAVA" value="498" />
           <entry key="Kotlin" value="1" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="Properties" value="24" />
@@ -190,7 +186,7 @@
           <entry key="gradle" value="47" />
           <entry key="html" value="407" />
           <entry key="http" value="77" />
-          <entry key="java" value="10141" />
+          <entry key="java" value="10212" />
           <entry key="properties" value="737" />
         </counts>
       </usages-collector>
@@ -198,7 +194,7 @@
         <counts>
           <entry key="Groovy" value="47" />
           <entry key="HTML" value="407" />
-          <entry key="JAVA" value="10141" />
+          <entry key="JAVA" value="10212" />
           <entry key="PLAIN_TEXT" value="76" />
           <entry key="Properties" value="737" />
           <entry key="Scratch" value="77" />
@@ -213,22 +209,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/offenses/EmissionOffense.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-148">
-              <caret line="26" column="8" selection-start-line="26" selection-end-line="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/offenses/SpeedingOffense.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -237,7 +221,7 @@
         <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/services/ProxyServiceHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -249,7 +233,7 @@
         <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/receivers/OtherReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -258,7 +242,7 @@
         <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/receivers/QueueReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="14" selection-start-line="14" selection-end-line="18" selection-end-column="3" />
+              <caret line="14" selection-start-line="14" selection-end-line="19" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -267,7 +251,7 @@
         <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/messageHandlers/XmlToMessage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -276,7 +260,7 @@
         <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/configs/FineCalculatorConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="145">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="31" />
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -296,20 +280,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/rest/ViolationControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="510">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/web/ViolationWebControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/web/ViolationWebControllerTest.java">
+        <entry file="file://$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/ProcesorApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+            <state relative-caret-position="102">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -1077,14 +1070,14 @@
         <option value="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/controllers/web/ViolationWebController.java" />
         <option value="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/model/Violation.java" />
         <option value="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/controllers/rest/ViolationController.java" />
-        <option value="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/rest/ViolationControllerTest.java" />
-        <option value="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/web/ViolationWebControllerTest.java" />
         <option value="$PROJECT_DIR$/procesor/build.gradle" />
         <option value="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/calculators/FineCalculatorTest.java" />
         <option value="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/services/ProxyServiceHandlerTest.java" />
         <option value="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/EmissionOffenseTest.java" />
         <option value="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/detectors/ProxyServiceTest.java" />
         <option value="$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/calculators/FineCalculator.java" />
+        <option value="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/rest/ViolationControllerTest.java" />
+        <option value="$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/web/ViolationWebControllerTest.java" />
       </list>
     </option>
   </component>
@@ -1100,8 +1093,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="952" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
@@ -1152,87 +1145,6 @@
               <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-              <item name="violations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-              <item name="violations" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-              <item name="violations" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-              <item name="violations" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-              <item name="violations" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-              <item name="violations" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-              <item name="violations" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-              <item name="violations" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1245,101 +1157,12 @@
             </path>
             <path>
               <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="procesor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="procesor" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
               <item name="simulator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
               <item name="simulator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="simulator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="simulator" type="462c0819:PsiDirectoryNode" />
-              <item name="generators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simulator" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="simulator" type="462c0819:PsiDirectoryNode" />
-              <item name="messengers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1356,7 +1179,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540325181036" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540326415498" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -1405,25 +1228,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProxyServiceTest.testCameraService">
-    <configuration name="procesor [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/procesor" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.SimulatorApplication">
     <configuration name="CommandLineMessengerTest.sendMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simulator" />
       <extension name="coverage">
@@ -1504,6 +1309,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ViolationControllerTest.createViolation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="procesor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.kdg.procesor.violations.controllers.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.kdg.procesor.violations.controllers.rest" />
+      <option name="MAIN_CLASS_NAME" value="be.kdg.procesor.violations.controllers.rest.ViolationControllerTest" />
+      <option name="METHOD_NAME" value="createViolation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProcesorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="procesor" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="be.kdg.procesor.ProcesorApplication" />
@@ -1521,19 +1342,19 @@
     <list>
       <item itemvalue="Spring Boot.SimulatorApplication" />
       <item itemvalue="Spring Boot.ProcesorApplication" />
-      <item itemvalue="Gradle.procesor [dependencies]" />
       <item itemvalue="JUnit.FineCalculatorTest.calculate" />
       <item itemvalue="JUnit.ProxyServiceHandlerTest.testLicensePlateService" />
       <item itemvalue="JUnit.ProxyServiceTest.detect" />
       <item itemvalue="JUnit.ProxyServiceTest.testCameraService" />
+      <item itemvalue="JUnit.ViolationControllerTest.createViolation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ViolationControllerTest.createViolation" />
         <item itemvalue="JUnit.ProxyServiceTest.testCameraService" />
         <item itemvalue="JUnit.ProxyServiceTest.detect" />
         <item itemvalue="JUnit.ProxyServiceHandlerTest.testLicensePlateService" />
         <item itemvalue="JUnit.FineCalculatorTest.calculate" />
-        <item itemvalue="Gradle.procesor [dependencies]" />
       </list>
     </recent_temporary>
   </component>
@@ -1562,14 +1383,11 @@
       <workItem from="1539345090473" duration="7209000" />
       <workItem from="1539673520118" duration="9183000" />
       <workItem from="1539869644150" duration="23438000" />
-      <workItem from="1540212584954" duration="32569000" />
+      <workItem from="1540212584954" duration="33527000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FineCalculatorTest_calculate - 2018.10.23 at 21h 20m 05s.xml">
-      <configuration name="FineCalculatorTest.calculate" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FineCalculatorTest_calculate - 2018.10.23 at 21h 32m 29s.xml">
       <configuration name="FineCalculatorTest.calculate" configurationId="JUnit" />
     </history-entry>
@@ -1597,9 +1415,12 @@
     <history-entry file="ProxyServiceTest_testCameraService - 2018.10.23 at 22h 05m 06s.xml">
       <configuration name="ProxyServiceTest.testCameraService" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ViolationControllerTest_createViolation - 2018.10.23 at 22h 21m 17s.xml">
+      <configuration name="ViolationControllerTest.createViolation" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155555000" />
+    <option name="totallyTimeSpent" value="156513000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1611,10 +1432,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3231623" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15637584" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1624,7 +1444,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3319149" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32281205" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31914893" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1659,16 +1479,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/configs/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/exceptions/ViolationException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -2061,14 +1871,14 @@
     <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/offenses/SpeedingOffense.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/detectors/services/ProxyServiceHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2078,28 +1888,28 @@
     <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/receivers/OtherReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/receivers/QueueReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="14" selection-start-line="14" selection-end-line="18" selection-end-column="3" />
+          <caret line="14" selection-start-line="14" selection-end-line="19" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/messages/messageHandlers/XmlToMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/procesor/src/main/java/be/kdg/procesor/violations/configs/FineCalculatorConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="31" />
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2116,17 +1926,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/web/ViolationWebControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/ProcesorApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        <state relative-caret-position="102">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/rest/ViolationControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="510">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/procesor/src/test/java/be/kdg/procesor/violations/controllers/web/ViolationWebControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>

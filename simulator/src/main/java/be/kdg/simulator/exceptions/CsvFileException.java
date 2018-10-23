@@ -2,6 +2,7 @@ package be.kdg.simulator.exceptions;
 
 /**
  * This is an Exception class for reading an csv file
+ *
  * @author Sam Laureys
  * @version 1.0
  */

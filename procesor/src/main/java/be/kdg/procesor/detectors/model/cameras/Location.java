@@ -5,12 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
 /**
  * This class represents a Location
+ *
  * @author Sam Laureys
  */
 @Data
@@ -18,9 +15,9 @@ import javax.persistence.Id;
 @AllArgsConstructor
 public class Location {
     private Long id;
-    @JsonAlias({"long","longitude"})
+    @JsonAlias({"long", "longitude"})
     private double longitude;
-    @JsonAlias({"lat","latitude"})
+    @JsonAlias({"lat", "latitude"})
     private double latitude;
 
     public Long getId() {

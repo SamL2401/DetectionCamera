@@ -17,6 +17,7 @@ import java.util.List;
 
 /**
  * This class is responsible for handling the web calls from violations
+ *
  * @author Sam Laureys
  * @version 1.01
  */
@@ -35,7 +36,7 @@ public class ViolationWebController {
     public ModelAndView showViolationForm(ViolationDTO violationDTO) {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("violationForm");
-        mv.addObject("violationDTO",violationDTO);
+        mv.addObject("violationDTO", violationDTO);
         return mv;
     }
 

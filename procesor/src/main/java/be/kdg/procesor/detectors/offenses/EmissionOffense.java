@@ -1,12 +1,11 @@
 package be.kdg.procesor.detectors.offenses;
 
 import be.kdg.procesor.detectors.calculators.FineCalculator;
-import be.kdg.procesor.messages.model.messages.CameraMessage;
 import be.kdg.procesor.detectors.model.cameras.DetectionCamera;
 import be.kdg.procesor.detectors.model.cars.LicensePlate;
 import be.kdg.procesor.detectors.services.ProxyServiceHandler;
+import be.kdg.procesor.messages.model.messages.CameraMessage;
 import be.kdg.procesor.violations.model.Violation;
-import be.kdg.procesor.violations.model.ViolationType;
 import be.kdg.procesor.violations.services.ViolationService;
 import be.kdg.sa.services.CameraNotFoundException;
 import be.kdg.sa.services.LicensePlateNotFoundException;
@@ -15,15 +14,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
 
 /**
  * This class is responsible for detecting an emission offense
+ *
  * @author Sam Laureys
  * @version 1.03
  */
 @Component
-public class EmissionOffense{
+public class EmissionOffense {
     private final Logger LOGGER = LoggerFactory.getLogger(EmissionOffense.class);
 
     private final ProxyServiceHandler proxyServiceHandler;

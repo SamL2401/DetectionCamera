@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Processor of the DetectionCamera
+ *
  * @author Sam Laureys
  */
 @SpringBootApplication

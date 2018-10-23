@@ -6,6 +6,7 @@ import java.util.Optional;
 
 /**
  * Interface for Generators
+ *
  * @author Sam Laureys
  * @version 1.0
  */

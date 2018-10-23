@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 
 /**
  * This class represents a Violation
+ *
  * @author Sam Laureys
  */
 @Data
@@ -28,7 +29,7 @@ public class Violation {
     private String violationType;
     @Column
     private String licensePlate;
-//    @Column
+    //    @Column
 //    private String nationalRegister;
     @Column
     private LocalDateTime timestamp;

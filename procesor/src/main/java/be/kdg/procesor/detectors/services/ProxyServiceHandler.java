@@ -14,6 +14,7 @@ import java.io.IOException;
 
 /**
  * This class is responsible for handling the Json object from the proxy services
+ *
  * @author Sam Laureys
  * @version 1.02
  */

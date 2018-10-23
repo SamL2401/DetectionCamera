@@ -13,6 +13,7 @@ import java.util.Random;
 
 /**
  * This class is responsible for creating random CameraMessages
+ *
  * @author Sam Laureys
  * @version 1.02
  */
@@ -29,7 +30,7 @@ public class RandomMessageGenerator implements MessageGenerator {
 
     private String randomLicense() {
         StringBuilder s = new StringBuilder();
-        s.append(rand.nextInt(9)+1);
+        s.append(rand.nextInt(9) + 1);
         s.append("-");
         for (int i = 0; i < 3; i++) {
             char ch = (char) (Math.random() * 26 + 'A');

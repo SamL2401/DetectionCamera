@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * This is a configuration file for the fine calculator settings
+ *
  * @author Sam Laureys
  */
 @Component

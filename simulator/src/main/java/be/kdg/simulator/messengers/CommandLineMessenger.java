@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * This class is responsible for sending CameraMessages to the CommandLine
+ *
  * @author Sam Laureys
  * @version 1.01
  */

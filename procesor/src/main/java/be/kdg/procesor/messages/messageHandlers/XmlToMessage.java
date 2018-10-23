@@ -16,6 +16,7 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * This class is responsible for converting a xml to a CameraMessage object
+ *
  * @author Sam Laureys
  * @version 1.01
  */

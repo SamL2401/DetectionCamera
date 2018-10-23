@@ -5,6 +5,7 @@ import java.util.Objects;
 
 /**
  * This class represents a CameraMessage
+ *
  * @author Sam Laureys
  */
 public class CameraMessage {

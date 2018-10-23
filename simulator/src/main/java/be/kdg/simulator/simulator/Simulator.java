@@ -2,6 +2,7 @@ package be.kdg.simulator.simulator;
 
 /**
  * Interface for Simulator
+ *
  * @author Sam Laureys
  * @version 1.0
  */

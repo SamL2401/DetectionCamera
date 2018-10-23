@@ -1,12 +1,13 @@
 package be.kdg.procesor.detectors.observers.subscribers;
 
-import be.kdg.procesor.detectors.offenses.EmissionOffense;
 import be.kdg.procesor.detectors.observers.publishers.CameraMessageEvent;
+import be.kdg.procesor.detectors.offenses.EmissionOffense;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
 /**
  * This is a subscriber and will listen to a new CameraMessageEvent
+ *
  * @author Sam Laureys
  */
 @Component

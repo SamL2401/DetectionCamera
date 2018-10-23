@@ -1,13 +1,12 @@
 package be.kdg.procesor.detectors.calculators;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Testing the FineCalculator
@@ -22,6 +21,6 @@ public class FineCalculatorTest {
     @Test
     public void calculate() {
         double fine = fineCalculator.calculate("emission");
-        assertEquals(250,fine,1e-15);
+        assertEquals(250, fine, 1e-15);
     }
 }

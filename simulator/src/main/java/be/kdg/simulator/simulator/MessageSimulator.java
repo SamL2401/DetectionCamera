@@ -19,8 +19,8 @@ import java.util.Optional;
 @Component
 public class MessageSimulator implements Simulator {
     private static final Logger LOGGER = LoggerFactory.getLogger(FileGenerator.class);
-    private MessageGenerator messageGenerator;
-    private Messenger messenger;
+    private final MessageGenerator messageGenerator;
+    private final Messenger messenger;
 
     public MessageSimulator(MessageGenerator messageGenerator, Messenger messenger) {
         this.messageGenerator = messageGenerator;

@@ -12,6 +12,11 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
+/**
+ * This class is responsible for receiving messages from the queue
+ * @author Sam Laureys
+ * @version 1.01
+ */
 @Component
 @RabbitListener(queues = "camera-queue")
 @ConditionalOnProperty(name = "receiver.type", havingValue = "queue")

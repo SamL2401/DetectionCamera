@@ -3,6 +3,10 @@ package be.kdg.procesor.messages.model.messages;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+/**
+ * This class represents a CameraMessage
+ * @author Sam Laureys
+ */
 public class CameraMessage {
     private int id;
     private String licensePlate;

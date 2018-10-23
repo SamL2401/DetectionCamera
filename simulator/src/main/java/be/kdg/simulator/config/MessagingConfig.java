@@ -6,6 +6,10 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * This is an configuration file for the message handling
+ * @author Sam Laureys
+ */
 @Configuration
 public class MessagingConfig {
 

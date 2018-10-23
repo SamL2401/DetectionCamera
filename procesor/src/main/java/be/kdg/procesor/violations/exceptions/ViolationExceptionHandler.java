@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-
+/**
+ * This class handles a ViolationException
+ * @author Sam Laureys
+ * @version 1.01
+ */
 @ControllerAdvice
 public class ViolationExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(value = {ViolationException.class})

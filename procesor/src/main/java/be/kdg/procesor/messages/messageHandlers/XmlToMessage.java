@@ -14,6 +14,11 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * This class is responsible for converting a xml to a CameraMessage object
+ * @author Sam Laureys
+ * @version 1.01
+ */
 @Component
 public class XmlToMessage {
     private static final Logger LOGGER = LoggerFactory.getLogger(XmlToMessage.class);

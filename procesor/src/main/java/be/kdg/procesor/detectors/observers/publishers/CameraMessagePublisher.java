@@ -5,6 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
+/**
+ * Publishes an CameraMessageEvent So that subscribers can react
+ * @author Sam Laureys
+ */
 @Component
 public class CameraMessagePublisher {
     @Autowired

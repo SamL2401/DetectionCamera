@@ -1,5 +1,6 @@
 package be.kdg.simulator.generators;
 
+import be.kdg.simulator.exceptions.CsvFileException;
 import be.kdg.simulator.model.CameraMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -59,13 +60,8 @@ public class FileGenerator implements MessageGenerator {
             } else {
                 inputStream.close();
             }
-//TODO error handling
-        } catch (IOException e) {
-            LOGGER.error("MessageFileReaderImpl: Error whilst reading the CSV file");
-        } catch (ParseException e) {
-            LOGGER.warn(e.getLocalizedMessage());
-        } catch (InterruptedException e) {
-            LOGGER.warn(e.getLocalizedMessage());
+        } catch (IOException | ParseException | InterruptedException e) {
+            throw new CsvFileException("Failed to load csv file");
         }
         return optionalCameraMessage;
     }

@@ -1,8 +1,8 @@
 package be.kdg.procesor.detectors.services;
 
 
-import be.kdg.procesor.cameras.model.DetectionCamera;
-import be.kdg.procesor.cars.model.LicensePlate;
+import be.kdg.procesor.detectors.model.cameras.DetectionCamera;
+import be.kdg.procesor.detectors.model.cars.LicensePlate;
 import be.kdg.sa.services.CameraServiceProxy;
 import be.kdg.sa.services.LicensePlateServiceProxy;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,9 +12,13 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
+/**
+ * This class is responsible for handling the Json object from the proxy services
+ * @author Sam Laureys
+ * @version 1.02
+ */
 @Service
 public class ProxyServiceHandler {
-
     private final Logger LOGGER = LoggerFactory.getLogger(ProxyServiceHandler.class);
 
     private final CameraServiceProxy cameraServiceProxy;

@@ -4,7 +4,7 @@
 
 <head>
 
-    <link rel="icon" href="/static/images/favicon1.ico">
+    <link rel="icon" href="/static/images/faviconCamera.ico">
 
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" media="screen"/>
 
@@ -38,19 +38,15 @@
 
                     <table class="table">
 
-                        <tr>
-
-                            <td th:text="${violationDTO.fine}">$</td>
-
+                        <tr th:each="violationDTO: ${violationDTO}">
+                        <td th:text="${violationDTO.licensePlate}">$</td>
+                        <td th:text="${violationDTO.timestamp}">$</td>
+                        <td th:text="${violationDTO.approved}">$</td>
+                        <td th:text="${violationDTO.fine}">$</td>
+                        <td th:text="${violationDTO.violationType}">$</td>
                         </tr>
 
                     </table>
-
-                    <div>
-
-                        <p>Maak nog een <a href="/violation/violation.do">violation</a></p>
-
-                    </div>
 
                 </div>
 

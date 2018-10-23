@@ -5,6 +5,10 @@ import be.kdg.sa.services.LicensePlateServiceProxy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * This is a configuration file for the service proxy handling
+ * @author Sam Laureys
+ */
 @Configuration
 public class ServicesConfig {
 

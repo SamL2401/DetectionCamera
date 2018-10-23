@@ -1,19 +1,18 @@
-package be.kdg.procesor.cameras.model;
+package be.kdg.procesor.detectors.model.cameras;
 
 import lombok.Data;
 
 import javax.persistence.*;
 
+/**
+ * This class represents a DetectionCamera
+ * @author Sam Laureys
+ */
 @Data
-@Entity
 public class DetectionCamera {
-    @Id
     private int cameraId;
-    @OneToOne(targetEntity = Location.class, cascade = {CascadeType.ALL})
     private Location location;
-    @OneToOne(targetEntity = Segment.class, cascade = {CascadeType.ALL})
     private Segment segment;
-    @Column
     private int euroNorm;
 
     public DetectionCamera() {

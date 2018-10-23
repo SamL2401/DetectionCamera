@@ -1,4 +1,4 @@
-package be.kdg.procesor.cameras.model;
+package be.kdg.procesor.detectors.model.cameras;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,19 +9,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * This class represents a Segment
+ * @author Sam Laureys
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 public class Segment {
-    @Id
-    @GeneratedValue
     private Long id;
-    @Column
     private int connectedCameraId;
-    @Column
     private int distance;
-    @Column
     private int speedLimit;
 
     public Long getId() {

@@ -5,6 +5,10 @@ import be.kdg.procesor.detectors.observers.publishers.CameraMessageEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
+/**
+ * This is a subscriber and will listen to a new CameraMessageEvent
+ * @author Sam Laureys
+ */
 @Component
 public class SpeedingOffenseSubscriber implements ApplicationListener<CameraMessageEvent> {
     private final SpeedingOffense speedingOffense;

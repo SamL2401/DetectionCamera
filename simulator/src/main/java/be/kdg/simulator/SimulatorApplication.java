@@ -7,7 +7,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 /**
  * Simulator for the processor of the DetectionCamera
  * @author Sam Laureys
- * @version 1.04
  */
 @SpringBootApplication
 @EnableScheduling

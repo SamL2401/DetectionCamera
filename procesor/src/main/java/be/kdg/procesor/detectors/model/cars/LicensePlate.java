@@ -1,4 +1,4 @@
-package be.kdg.procesor.cars.model;
+package be.kdg.procesor.detectors.model.cars;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,16 +8,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * This class represents a LicensePlate
+ * @author Sam Laureys
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class LicensePlate {
-    @Id
     private String plateId;
-    @Column
     private String nationalNumber;
-    @Column
     private int euroNumber;
 
     public String getPlateId() {

@@ -1,4 +1,4 @@
-package be.kdg.procesor.cameras.model;
+package be.kdg.procesor.detectors.model.cameras;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import lombok.AllArgsConstructor;
@@ -9,13 +9,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * This class represents a Location
+ * @author Sam Laureys
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 public class Location {
-    @Id
-    @GeneratedValue
     private Long id;
     @JsonAlias({"long","longitude"})
     private double longitude;

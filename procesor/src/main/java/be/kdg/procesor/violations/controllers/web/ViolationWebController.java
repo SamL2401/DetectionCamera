@@ -1,7 +1,8 @@
 package be.kdg.procesor.violations.controllers.web;
 
 import be.kdg.procesor.violations.dto.ViolationDTO;
-import be.kdg.procesor.violations.model.violations.Violation;
+import be.kdg.procesor.violations.exceptions.ViolationException;
+import be.kdg.procesor.violations.model.Violation;
 import be.kdg.procesor.violations.services.ViolationService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Controller;
@@ -12,7 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.util.List;
 
+/**
+ * This class is responsible for handling the web calls from violations
+ * @author Sam Laureys
+ * @version 1.01
+ */
 @Controller
 @RequestMapping("/violation")
 public class ViolationWebController {
@@ -26,7 +33,16 @@ public class ViolationWebController {
 
     @GetMapping("/violation.do")
     public ModelAndView showViolationForm(ViolationDTO violationDTO) {
-        return new ModelAndView("violationForm","violationDTO",violationDTO);
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("violationForm");
+        mv.addObject("violationDTO",violationDTO);
+        return mv;
+    }
+
+    @GetMapping("/allViolation.show")
+    public ModelAndView showAllViolations() throws ViolationException {
+        List<Violation> violations = violationService.getViolationsList();
+        return new ModelAndView("violationSum", "violationDTOs", modelMapper.map(violations, ViolationDTO.class));
     }
 
     @PostMapping("/newViolation.do")

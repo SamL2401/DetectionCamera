@@ -7,6 +7,10 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * This is a configuration file for the receiver
+ * @author Sam Laureys
+ */
 @Configuration
 public class ReceiverConfig {
     @Bean

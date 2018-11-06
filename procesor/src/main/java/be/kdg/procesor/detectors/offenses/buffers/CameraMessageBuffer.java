@@ -3,9 +3,9 @@ package be.kdg.procesor.detectors.offenses.buffers;
 import be.kdg.procesor.detectors.observers.publishers.CameraMessagePublisher;
 import be.kdg.procesor.messages.failsLoggers.LogToFile;
 import be.kdg.procesor.messages.model.messages.CameraMessage;
+import be.kdg.procesor.settings.configs.SettingsProcessorConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -22,17 +22,23 @@ public class CameraMessageBuffer {
 
     private final CameraMessagePublisher cameraMessagePublisher;
     private final LogToFile logToFile;
+    private final SettingsProcessorConfiguration settingsProcessorConfiguration;
     private Map<CameraMessage, Integer> cameraMessages;
-    @Value("${retryCount}")
+    private long retryDelay;
     private int retryCount;
 
-    public CameraMessageBuffer(CameraMessagePublisher cameraMessagePublisher, LogToFile logToFile) {
+    public CameraMessageBuffer(CameraMessagePublisher cameraMessagePublisher, LogToFile logToFile, SettingsProcessorConfiguration settingsProcessorConfiguration) {
         this.cameraMessagePublisher = cameraMessagePublisher;
         this.logToFile = logToFile;
+        this.settingsProcessorConfiguration = settingsProcessorConfiguration;
+        retryCount = settingsProcessorConfiguration.getRetryCount();
+        retryDelay = settingsProcessorConfiguration.getRetryDelay();
         cameraMessages = new ConcurrentHashMap<>();
+
     }
 
     public void addCameraMessage(CameraMessage cameraMessage) {
+        retryCount = settingsProcessorConfiguration.getRetryCount();
         if (cameraMessages.containsKey(cameraMessage)) {
             if (cameraMessages.get(cameraMessage) > retryCount) {
                 cameraMessages.put(cameraMessage, cameraMessages.get(cameraMessage) - retryCount);
@@ -47,10 +53,14 @@ public class CameraMessageBuffer {
         }
     }
 
-    @Scheduled(fixedDelayString = "${retryDelay}")
-    private void retryCameraMessage() {
+    @Scheduled(fixedDelay = 2000)
+    private void retryCameraMessage() throws Exception {
+
         LOGGER.info("Retry failedCameraMessages");
+        System.out.println(retryCount);
         if (cameraMessages.size() > 0) {
+            retryCount = settingsProcessorConfiguration.getRetryCount();
+            retryDelay = settingsProcessorConfiguration.getRetryDelay();
             List<CameraMessage> toRetryMessages = new ArrayList<>();
             for (Map.Entry<CameraMessage, Integer> entry : cameraMessages.entrySet()) {
                 if (entry.getValue() < retryCount) {
@@ -62,6 +72,8 @@ public class CameraMessageBuffer {
                 cameraMessagePublisher.publish(toRetryMessage);
             }
         }
+
+
     }
 }
 

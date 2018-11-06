@@ -1,6 +1,6 @@
 package be.kdg.procesor.detectors.calculators;
 
-import be.kdg.procesor.violations.configs.FineCalculatorConfiguration;
+import be.kdg.procesor.settings.configs.SettingsProcessorConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -14,19 +14,19 @@ import org.springframework.stereotype.Component;
 public class FineCalculator {
     private final Logger LOGGER = LoggerFactory.getLogger(FineCalculator.class);
 
-    private final FineCalculatorConfiguration fineCalculatorConfiguration;
+    private final SettingsProcessorConfiguration settingsProcessorConfiguration;
 
-    public FineCalculator(FineCalculatorConfiguration fineCalculatorConfiguration) {
-        this.fineCalculatorConfiguration = fineCalculatorConfiguration;
+    public FineCalculator(SettingsProcessorConfiguration settingsProcessorConfiguration) {
+        this.settingsProcessorConfiguration = settingsProcessorConfiguration;
     }
 
     public double calculate() {
         LOGGER.info("emission calculated");
-        return fineCalculatorConfiguration.getEmissionFineFactor();
+        return settingsProcessorConfiguration.getEmissionFineFactor();
     }
 
     public double calculate(float speed, float speedlimit) {
         LOGGER.info("emission calculated");
-        return (speed - speedlimit) * fineCalculatorConfiguration.getEmissionFineFactor();
+        return (speed - speedlimit) * settingsProcessorConfiguration.getSpeedingFineFactor();
     }
 }

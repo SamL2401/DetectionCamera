@@ -1,4 +1,4 @@
-package be.kdg.procesor.violations.exceptions;
+package be.kdg.procesor.settings.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -12,9 +12,9 @@ import org.springframework.web.servlet.ModelAndView;
  * @version 1.01
  */
 @ControllerAdvice
-public class ViolationExceptionWebHandler {
-    @ExceptionHandler(value = {ViolationException.class})
-    protected ModelAndView handleViolationException() {
+public class SettingsExceptionWebHandler {
+    @ExceptionHandler(value = {ProcessorSettingsException.class})
+    protected ModelAndView handleSettingsException() {
         return new ModelAndView("filesNotFound", HttpStatus.NOT_FOUND);
     }
 }

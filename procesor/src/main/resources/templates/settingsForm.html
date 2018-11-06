@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Settings Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Settings</h1>
+<form action="#" th:action="@{/settings/updateSettings.do}" th:object="${processorSettingsDTO}" method="post">
+    <p>emissionFineFactor: <input type="text" th:field="*{emissionFineFactor}" /></p>
+    <p>speedingFineFactor: <input type="text" th:field="*{speedingFineFactor}" /></p>
+    <p>timeFrameBufferingSegments: <input type="text" th:field="*{timeFrameBufferingSegments}" /></p>
+    <p>timeFrameDoubleEmission: <input type="text" th:field="*{timeFrameDoubleEmission}" /></p>
+    <p>retryDelay: <input type="text" th:field="*{retryDelay}" /></p>
+    <p>retryCount: <input type="text" th:field="*{retryCount}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

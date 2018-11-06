@@ -49,7 +49,7 @@ public class EmissionOffense {
                 LOGGER.info("EURONORM VIOLATION:  " + violation.toString());
                 violationService.save(violation);
             }
-        } catch (CameraNotFoundException | LicensePlateNotFoundException | IOException e) {
+        } catch (Exception e) {
             LOGGER.warn(e.getLocalizedMessage() + " and send to buffer");
             //cameraMessageBuffer.addCameraMessage(cameraMessage);
         }

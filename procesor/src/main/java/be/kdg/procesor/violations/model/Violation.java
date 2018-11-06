@@ -16,7 +16,6 @@ import java.time.LocalDateTime;
  * @author Sam Laureys
  */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 public class Violation {

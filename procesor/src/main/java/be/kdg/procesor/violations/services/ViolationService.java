@@ -43,10 +43,6 @@ public class ViolationService {
         throw new ViolationException("Violations list not found");
     }
 
-    public Violation add(Violation violation) {
-        return violationRepository.save(violation);
-    }
-
     public List<Violation> getFilteredViolations(LocalDateTime startTime, LocalDateTime endTime) throws ViolationException {
         List<Violation> optionalViolationList = violationRepository.findAllByTimestampBetween(startTime, endTime);
         if (optionalViolationList.size() > 0)

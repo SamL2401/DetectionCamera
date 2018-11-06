@@ -32,6 +32,15 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return null;
+        if (username.equals("user")) {
+            //repo.findUserByusername
+            return User.withDefaultPasswordEncoder()
+                    .username("user")
+                    .password("pwdm")
+                    .roles("USER")
+                    .build();
+        } else {
+            throw new UsernameNotFoundException("not found");
+        }
     }
 }

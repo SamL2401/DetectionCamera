@@ -1,0 +1,359 @@
+DELETE http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+
+###
+
+DELETE http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+
+###
+
+POST http://localhost:9090/api/users
+Content-Type: application/json
+cookie: 8DF93570964D6D22193C1CF93207C6F7
+X-CSRF-TOKEN: e458f509-b606-49f5-b8ea-e3e95d001eb6
+{:
+  "userName": "Joe"
+  "password": "abc"
+}:
+
+###
+
+POST http://localhost:9090/api/users
+Content-Type: application/json
+cookie: 7213E8DAE8BA3DEFCAAECC2D48327240
+X-CSRF-TOKEN: e458f509-b606-49f5-b8ea-e3e95d001eb6
+{:
+  "userName": "Joe"
+  "password": "abc"
+}:
+
+###
+
+POST http://localhost:9090/api/users
+Content-Type: application/json
+cookie: B6ED75B1F589C5EAEA31AA25521918A1
+X-CSRF-TOKEN: e458f509-b606-49f5-b8ea-e3e95d001eb6
+{:
+  "userName": "Joe"
+  "password": "abc"
+}:
+
+###
+
+PUT http://localhost:9090/api/use
+Content-Type: application/json
+cookie: B6ED75B1F589C5EAEA31AA25521918A1
+X-CSRF-TOKEN: e458f509-b606-49f5-b8ea-e3e95d001eb6
+{:
+  "userName": "Joe"
+  "password": "abc"
+}:
+
+###
+
+PUT http://localhost:9090/api/users/
+Content-Type: application/json
+cookie: B6ED75B1F589C5EAEA31AA25521918A1
+X-CSRF-TOKEN: e458f509-b606-49f5-b8ea-e3e95d001eb6
+{:
+  "userName": "Joe"
+  "password": "abc"
+}:
+
+###
+
+PUT http://localhost:9090/api/users/1
+Content-Type: application/json
+cookie: B6ED75B1F589C5EAEA31AA25521918A1
+X-CSRF-TOKEN: e458f509-b606-49f5-b8ea-e3e95d001eb6
+{:
+  "userName": "Joe"
+  "password": "abc"
+}:
+
+###
+
+PUT http://localhost:9090/api/users/1
+Content-Type: application/json
+cookie: B6ED75B1F589C5EAEA31AA25521918A1
+X-CSRF-TOKEN: 9401d2bf-c4f7-4bad-bfa4-18d9b03af86a
+{:
+  "userName": "Joe"
+  "password": "abc"
+}:
+
+###
+
+PUT http://localhost:9090/api/users/1
+Content-Type: application/json
+cookie: B6ED75B1F589C5EAEA31AA25521918A1
+X-CSRF-TOKEN: 9401d2bf-c4f7-4bad-bfa4-18d9b03af86a
+{:
+  "password": "abc"
+  "userName": "Joe"
+}:
+
+###
+
+PUT http://localhost:9090/api/users/1
+Content-Type: application/json
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+{:
+  "password": "abc"
+  "userName": "Joe"
+}:
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+
+<> 2018-11-06T092026.200.html
+
+###
+
+POST http://localhost:9090/api/violations
+Content-Type: application/json
+{:
+  "fine": 2000
+   "violationType": "emission"
+   "aproved": false
+   "motivation": "something"
+}:
+
+###
+
+POST http://localhost:9090/api/violations
+Content-Type: application/json
+{:
+  "content": "Joe de Namen"
+   "fine": 20
+   "licensePlate": "1-ABC-123"
+   "Rijksrigister": "12.34.56-789"
+}:
+
+###
+
+GET http://localhost:9090/api/violation/1
+Accept: */*
+cache-Control: no-cache
+cookie: 539155D70F0B0EE6EC324B75F28B9DFD
+
+<> 2018-11-06T085809.200.html
+
+###
+
+GET http://localhost:9090/api/violation/1
+Accept: */*
+cache-Control: no-cache
+
+<> 2018-11-06T085728.200.html
+
+###
+
+PUT http://localhost:9090/api/users/1
+Content-Type: application/json
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+{:
+  "password": "abc"
+  "userName": "Joe"
+}:
+
+###
+
+PUT http://localhost:9090/api/users/1
+Content-Type: application/json
+{:
+  "userName": "Joe"
+   "password": "abc"
+}:
+
+###
+
+PUT http://localhost:9090/api/users/1
+Content-Type: application/json
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+{:
+  "userName": "Joe"
+   "password": "abc"
+}:
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+
+<> 2018-11-06T085113.401.json
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+
+<> 2018-11-06T085057.401.json
+
+###
+
+PUT http://localhost:9090/api/users/1
+Content-Type: application/json
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+{:
+  "userName": "Joe"
+   "password": "abc"
+}:
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+
+<> 2018-11-06T084554.200.html
+
+###
+
+POST http://localhost:9090/api/users
+Content-Type: application/json
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+{:
+  "userName": "Joe"
+   "password": "abc"
+}:
+
+###
+
+POST http://localhost:9090/api/users
+Content-Type: application/json
+{:
+  "userName": "Joe"
+   "password": "abc"
+}:
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+
+###
+
+POST http://localhost:9090/api/users
+Content-Type: application/json
+{:
+  "userName": "Joe"
+   "password": "abc"
+}:
+
+###
+
+PUT http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+cookie: 5841EEF073C7F6AD144FAAC3F8533238
+
+###
+
+POST http://localhost:9090/api/users
+Content-Type: application/json
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+{:
+  "userName": "Joe"
+   "password": "abc"
+}:
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+
+<> 2018-11-06T084018.200.html
+
+###
+
+POST http://localhost:9090/api/users
+Content-Type: application/json
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+{:
+  "userName": "Joe"
+   "password": "abc"
+}:
+
+###
+
+POST http://localhost:9090/api/users
+Content-Type: application/json
+{:
+  "userName": "Joe"
+   "password": "abc"
+}:
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+
+<> 2018-11-06T083813.200.html
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+cookie: 5841EEF073C7F6AD144FkAAC3F8533238
+
+<> 2018-11-06T083755.200.html
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+cookie: 5841EEF073C7F6AD144FAAC3F8533238
+
+<> 2018-11-06T083742.200.html
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+cookie: BF1CE989BC7E66F02784795ED79EAE57
+
+<> 2018-11-06T083505.200.html
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+cookie: 5841EEF073C7F6AD144FAAC3F8533238
+
+<> 2018-11-06T082803.401.json
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+cookie: 5841EEF073C7F6AD144FAAC3F8533238
+
+<> 2018-11-06T082301.401.json
+
+###
+
+GET http://localhost:9090/api/users/1
+Accept: */*
+cache-Control: no-cache
+
+<> 2018-11-06T082050.401.json
+
+###
+

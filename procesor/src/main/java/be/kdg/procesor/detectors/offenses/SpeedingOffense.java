@@ -54,7 +54,7 @@ public class SpeedingOffense {
             }
         } catch (Exception e) {
             LOGGER.warn(e.getLocalizedMessage() + " and send to buffer");
-            //cameraMessageBuffer.addCameraMessage(cameraMessage);
+            cameraMessageBuffer.addCameraMessage(cameraMessage);
         }
     }
 

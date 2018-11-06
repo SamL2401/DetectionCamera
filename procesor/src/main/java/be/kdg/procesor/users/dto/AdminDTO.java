@@ -1,28 +1,16 @@
-package be.kdg.procesor.users.model;
+package be.kdg.procesor.users.dto;
 
-import lombok.Data;
+public class AdminDTO {
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Data
-@Entity
-public class Admin {
-    @Id
-    @GeneratedValue
     private Long id;
-    @Column
     private String userName;
-    @Column
     private String password;
 
-    public Admin() {
+    public AdminDTO() {
 
     }
 
-    public Admin(String userName, String password) {
+    public AdminDTO(String userName, String password) {
         this.userName = userName;
         this.password = password;
     }

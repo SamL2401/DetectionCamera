@@ -26,6 +26,17 @@ public class RandomMessageGenerator implements MessageGenerator {
     private int cameraMax;
     @Value("${frequentie.val}")
     private int sleep;
+    @Value("${startRushHour1}")
+    private int startRushHour1;
+    @Value("${timeFrameRushHour1}")
+    private int timeFrameRushHour1;
+    @Value("${startRushHour2}")
+    private int startRushHour2;
+    @Value("${timeFrameRushHour2}")
+    private int timeFrameRushHour2;
+    @Value("${rushHourMultiplier}")
+    private int rushHourMultiplier;
+
     private Random rand = new Random();
 
     private String randomLicense() {
@@ -47,13 +58,23 @@ public class RandomMessageGenerator implements MessageGenerator {
     @Override
     public Optional<CameraMessage> generate() {
         try {
-            Thread.sleep(sleep);
+            Thread.sleep(setSleepAmount());
             LOGGER.debug("Random message generated");
             return Optional.of(new CameraMessage(rand.nextInt(cameraMax) + 1, randomLicense(), LocalDateTime.now()));
         } catch (InterruptedException e) {
             LOGGER.error(e.getMessage());
         }
         return Optional.empty();
+    }
+
+    private long setSleepAmount() {
+        int hour = LocalDateTime.now().getHour();
+        if (hour >= startRushHour1 && hour <= startRushHour1 + timeFrameRushHour1 ||
+                hour >= startRushHour2 && hour <= startRushHour2 + timeFrameRushHour2) {
+            return sleep / rushHourMultiplier;
+        } else {
+            return sleep;
+        }
     }
 
 

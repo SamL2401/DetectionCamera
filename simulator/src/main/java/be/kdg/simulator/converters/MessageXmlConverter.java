@@ -1,4 +1,4 @@
-package be.kdg.simulator.toXml;
+package be.kdg.simulator.converters;
 
 import be.kdg.simulator.model.CameraMessage;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -11,22 +11,23 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * This class is responsible for converting a CameraMessage to xml
+ * This class is responsible for converting a CameraMessage to xml or inverse
  *
  * @author Sam Laureys
  * @version 1.01
  */
 @Component
-public class MessageToXml {
-    private static final Logger LOGGER = LoggerFactory.getLogger(MessageToXml.class);
+public class MessageXmlConverter {
+    private static final Logger LOGGER = LoggerFactory.getLogger(MessageXmlConverter.class);
     private final XmlMapper xmlMapper;
     private final JavaTimeModule javaTimeModule;
 
-    public MessageToXml(XmlMapper xmlMapper, JavaTimeModule javaTimeModule) {
+    public MessageXmlConverter(XmlMapper xmlMapper, JavaTimeModule javaTimeModule) {
         this.xmlMapper = xmlMapper;
         this.javaTimeModule = javaTimeModule;
     }
@@ -36,6 +37,11 @@ public class MessageToXml {
         javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(DateTimeFormatter.ISO_DATE_TIME));
         xmlMapper.registerModule(javaTimeModule);
         xmlMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+    }
+
+    public CameraMessage toMessage(String xml) throws IOException {
+        LOGGER.info("Create Message from Xml");
+        return xmlMapper.readValue(xml, CameraMessage.class);
     }
 
     public String toXml(CameraMessage cameraMessage) throws JsonProcessingException {

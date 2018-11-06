@@ -1,7 +1,7 @@
 package be.kdg.procesor.messages.receivers;
 
 import be.kdg.procesor.detectors.observers.publishers.CameraMessagePublisher;
-import be.kdg.procesor.messages.messageHandlers.XmlToMessage;
+import be.kdg.procesor.messages.converters.MessageXmlConverter;
 import be.kdg.procesor.messages.model.messages.CameraMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,17 +25,17 @@ public class QueueReceiver implements Receiver {
     private static final Logger LOGGER = LoggerFactory.getLogger(QueueReceiver.class);
 
     private final CameraMessagePublisher cameraMessagePublisher;
-    private final XmlToMessage xmlToMessage;
+    private final MessageXmlConverter messageXmlConverter;
 
-    public QueueReceiver(CameraMessagePublisher cameraMessagePublisher, XmlToMessage xmlToMessage) {
+    public QueueReceiver(CameraMessagePublisher cameraMessagePublisher, MessageXmlConverter messageXmlConverter) {
         this.cameraMessagePublisher = cameraMessagePublisher;
-        this.xmlToMessage = xmlToMessage;
+        this.messageXmlConverter = messageXmlConverter;
     }
 
     @RabbitHandler
     public void receive(String in) {
         try {
-            CameraMessage cameraMessage = xmlToMessage.toMessage(in);
+            CameraMessage cameraMessage = messageXmlConverter.toMessage(in);
             LOGGER.info("Message received: " + cameraMessage);
             cameraMessagePublisher.publish(cameraMessage);
         } catch (IOException e) {

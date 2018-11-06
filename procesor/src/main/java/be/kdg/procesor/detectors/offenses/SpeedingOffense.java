@@ -70,7 +70,7 @@ public class SpeedingOffense {
             }
         } catch (CameraNotFoundException | LicensePlateNotFoundException | IOException e) {
             LOGGER.warn(e.getLocalizedMessage()+" and send to buffer");
-            cameraMessageBuffer.addCameraMessage(cameraMessage);
+            //cameraMessageBuffer.addCameraMessage(cameraMessage);
         }
     }
 

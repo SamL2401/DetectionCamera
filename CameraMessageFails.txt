@@ -1,0 +1,6 @@
+
+<CameraMessage><id>3</id><licensePlate>1-ERR-123</licensePlate><timestamp>2018-11-06T13:19:21.236367</timestamp></CameraMessage>
+<CameraMessage><id>101</id><licensePlate>1-ABC</licensePlate><timestamp>2018-11-06T13:19:21.1270017</timestamp></CameraMessage>
+<CameraMessage><id>3</id><licensePlate>1-UNK-123</licensePlate><timestamp>2018-11-06T13:19:21.3457482</timestamp></CameraMessage>
+<CameraMessage><id>465</id><licensePlate>3-ABC-123</licensePlate><timestamp>2018-11-06T13:19:21.4551159</timestamp></CameraMessage>
+<CameraMessage><id>3</id><licensePlate>1-UNK-123</licensePlate><timestamp>2018-11-06T13:19:21.5644725</timestamp></CameraMessage>

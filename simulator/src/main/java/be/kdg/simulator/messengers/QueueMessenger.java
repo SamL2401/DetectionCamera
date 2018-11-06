@@ -2,7 +2,7 @@ package be.kdg.simulator.messengers;
 
 import be.kdg.simulator.generators.FileGenerator;
 import be.kdg.simulator.model.CameraMessage;
-import be.kdg.simulator.toXml.MessageToXml;
+import be.kdg.simulator.converters.MessageXmlConverter;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,19 +24,19 @@ public class QueueMessenger implements Messenger {
 
     private final RabbitTemplate template;
     private final Queue queue;
-    private final MessageToXml messageToXml;
+    private final MessageXmlConverter messageXmlConverter;
 
-    public QueueMessenger(RabbitTemplate template, Queue queue, MessageToXml messageToXml) {
+    public QueueMessenger(RabbitTemplate template, Queue queue, MessageXmlConverter messageXmlConverter) {
         this.template = template;
         this.queue = queue;
-        this.messageToXml = messageToXml;
+        this.messageXmlConverter = messageXmlConverter;
     }
 
     @Override
     public void sendMessage(CameraMessage cameraMessage) {
         try {
             LOGGER.info("Sending message to the RabbitMq queue: " + cameraMessage.toString() + " to the " + queue.getName());
-            String cameraMessageXml = messageToXml.toXml(cameraMessage);
+            String cameraMessageXml = messageXmlConverter.toXml(cameraMessage);
             template.convertAndSend(queue.getName(), cameraMessageXml);
         } catch (JsonProcessingException e) {
             LOGGER.error("error converting camera message as XML!");

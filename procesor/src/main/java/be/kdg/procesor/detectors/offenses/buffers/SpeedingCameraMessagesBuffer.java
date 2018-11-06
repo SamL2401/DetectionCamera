@@ -1,12 +1,10 @@
 package be.kdg.procesor.detectors.offenses.buffers;
 
-import be.kdg.procesor.detectors.model.cameras.DetectionCamera;
-import be.kdg.procesor.detectors.services.ProxyServiceHandler;
 import be.kdg.procesor.messages.model.messages.CameraMessage;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +12,11 @@ import java.util.Optional;
 
 /**
  * This is class is responsible for storing CameraMessages and removing CameraMessages older than a given time
+ *
  * @author Sam Laureys
  */
 @Component
+@EnableScheduling
 public class SpeedingCameraMessagesBuffer {
 
     private List<CameraMessage> cameraMessages;
@@ -40,7 +40,7 @@ public class SpeedingCameraMessagesBuffer {
         return cameraMessages;
     }
 
-    public Optional<List<CameraMessage>> getCameraMessage(String licensePlate){
+    public Optional<List<CameraMessage>> getCameraMessage(String licensePlate) {
         Optional<List<CameraMessage>> optionalCameraMessages = Optional.empty();
         List<CameraMessage> cameraMessagesMatch = new ArrayList<>();
         for (CameraMessage cameraMessage : cameraMessages) {

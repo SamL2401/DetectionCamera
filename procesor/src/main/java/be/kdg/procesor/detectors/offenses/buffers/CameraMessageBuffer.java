@@ -57,7 +57,6 @@ public class CameraMessageBuffer {
     private void retryCameraMessage() throws Exception {
 
         LOGGER.info("Retry failedCameraMessages");
-        System.out.println(retryCount);
         if (cameraMessages.size() > 0) {
             retryCount = settingsProcessorConfiguration.getRetryCount();
             retryDelay = settingsProcessorConfiguration.getRetryDelay();

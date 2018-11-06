@@ -9,6 +9,7 @@ import javax.annotation.PostConstruct;
 
 /**
  * This is a configuration file for the fine calculator settings
+ *
  * @author Sam Laureys
  */
 @Component

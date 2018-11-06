@@ -1,6 +1,7 @@
 package be.kdg.procesor.detectors.offenses.buffers;
 
 import be.kdg.procesor.messages.model.messages.CameraMessage;
+import be.kdg.procesor.settings.configs.SettingsProcessorConfiguration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -20,9 +21,11 @@ import java.util.Optional;
 public class SpeedingCameraMessagesBuffer {
 
     private List<CameraMessage> cameraMessages;
+    private long timeFrameDoubleEmission;
 
-    public SpeedingCameraMessagesBuffer() {
+    public SpeedingCameraMessagesBuffer(SettingsProcessorConfiguration settingsProcessorConfiguration) {
         this.cameraMessages = new ArrayList<CameraMessage>();
+        timeFrameDoubleEmission = settingsProcessorConfiguration.getTimeFrameDoubleEmission();
     }
 
     public void addCameraMessage(CameraMessage cameraMessage) {
@@ -31,7 +34,7 @@ public class SpeedingCameraMessagesBuffer {
 
     @Scheduled(fixedDelay = 60000)
     public void UpdateTimeFrame() {
-        //TODO from proprerties with @Value
+
         LocalDateTime time = LocalDateTime.now().minusMinutes(30);
         cameraMessages.removeIf(c -> c.getTimestamp().isBefore(time));
     }

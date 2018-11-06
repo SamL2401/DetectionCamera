@@ -28,20 +28,20 @@ public class UserRestController {
 
     @PostMapping("/users")
     public ResponseEntity<AdminDTO> createUser(@RequestBody AdminDTO adminDTO) {
-        Admin adminIn = modelMapper.map(adminDTO,Admin.class);
+        Admin adminIn = modelMapper.map(adminDTO, Admin.class);
         Admin adminout = userService.save(adminIn);
-        return new ResponseEntity<>(modelMapper.map(adminout,AdminDTO.class),HttpStatus.CREATED);
+        return new ResponseEntity<>(modelMapper.map(adminout, AdminDTO.class), HttpStatus.CREATED);
     }
 
     @PutMapping("/users/{id}")
     public ResponseEntity<AdminDTO> updateUser(@PathVariable Long id, @RequestParam("userName") String newUserName, @RequestParam("password") String newPassword) throws UserException {
         Admin admin = userService.update(id, newUserName, newPassword);
-        return new ResponseEntity<>(modelMapper.map(admin,AdminDTO.class),HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(modelMapper.map(admin, AdminDTO.class), HttpStatus.ACCEPTED);
     }
 
     @DeleteMapping("/users/{id}")
     public ResponseEntity<AdminDTO> deleteUser(@PathVariable Long id) throws UserException {
         Admin admin = userService.delete(id);
-        return new ResponseEntity<>(modelMapper.map(admin,AdminDTO.class),HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(modelMapper.map(admin, AdminDTO.class), HttpStatus.ACCEPTED);
     }
 }

@@ -8,13 +8,10 @@ import be.kdg.procesor.detectors.services.ProxyServiceHandler;
 import be.kdg.procesor.messages.model.messages.CameraMessage;
 import be.kdg.procesor.violations.model.Violation;
 import be.kdg.procesor.violations.services.ViolationService;
-import be.kdg.sa.services.CameraNotFoundException;
-import be.kdg.sa.services.LicensePlateNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 
 /**
@@ -44,7 +41,7 @@ public class EmissionOffense {
             DetectionCamera camera = proxyServiceHandler.getCamera(cameraMessage.getId());
             LicensePlate licensePlate = proxyServiceHandler.getLicensePlate(cameraMessage.getLicensePlate());
 
-            if (licensePlate.getEuroNumber() < camera.getEuroNorm() && !violationService.getDoubleViolation(cameraMessage.getLicensePlate(), LocalDateTime.now().minusDays(1), LocalDateTime.now(),"emission").isPresent()) {
+            if (licensePlate.getEuroNumber() < camera.getEuroNorm() && !violationService.getDoubleViolation(cameraMessage.getLicensePlate(), LocalDateTime.now().minusDays(1), LocalDateTime.now(), "emission").isPresent()) {
                 Violation violation = new Violation(fineCalculator.calculate(), "emission", cameraMessage.getLicensePlate(), cameraMessage.getTimestamp());
                 LOGGER.info("EURONORM VIOLATION:  " + violation.toString());
                 violationService.save(violation);

@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 /**
  * the repo for the settings
  */
-public interface SettingsRepository extends JpaRepository<ProcessorSettings,Long> {
+public interface SettingsRepository extends JpaRepository<ProcessorSettings, Long> {
 }

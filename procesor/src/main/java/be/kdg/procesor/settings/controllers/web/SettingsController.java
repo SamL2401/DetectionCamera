@@ -7,7 +7,10 @@ import be.kdg.procesor.settings.services.SettingsService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -19,7 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 @RequestMapping("/settings")
-public class SettingsController{
+public class SettingsController {
     private final SettingsService settingsService;
     private final ModelMapper modelMapper;
 
@@ -38,12 +41,12 @@ public class SettingsController{
 
     @GetMapping("/settings.do")
     public ModelAndView showSettingsForm(ProcessorSettingsDTO processorSettingsDTO) {
-        return new ModelAndView("settingsForm","processorSettingsDTO",processorSettingsDTO);
+        return new ModelAndView("settingsForm", "processorSettingsDTO", processorSettingsDTO);
     }
 
     @PostMapping("/updateSettings.do")
     public ModelAndView updateSettingsForm(@ModelAttribute ProcessorSettingsDTO processorSettingsDTO) {
         ProcessorSettings settings = settingsService.updateSettings(modelMapper.map(processorSettingsDTO, ProcessorSettings.class));
-        return new ModelAndView("settingsForm", "processorSettingsDTO", modelMapper.map(settings,ProcessorSettingsDTO.class));
+        return new ModelAndView("settingsShow", "processorSettingsDTO", modelMapper.map(settings, ProcessorSettingsDTO.class));
     }
 }

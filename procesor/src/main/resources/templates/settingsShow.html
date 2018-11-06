@@ -6,8 +6,11 @@
     <title>Title</title>
 </head>
 <body>
-<p th:text="${appProp.emissionFineFactor}">emissionFineFactor is $</p>
-<p th:text="${appProp.speedingFineFactor}">speedingFineFactor is $</p>
-<p th:text="${appProp.timeFragment}">TimeFragment is $</p>
+<p th:text="${processorSettingsDTO.emissionFineFactor}">$</p>
+<p th:text="${processorSettingsDTO.speedingFineFactor}">$</p>
+<p th:text="${processorSettingsDTO.timeFrameBufferingSegments}">$</p>
+<p th:text="${processorSettingsDTO.timeFrameDoubleEmission}">$</p>
+<p th:text="${processorSettingsDTO.retryDelay}">$</p>
+<p th:text="${processorSettingsDTO.retryCount}">$</p>
 </body>
 </html>

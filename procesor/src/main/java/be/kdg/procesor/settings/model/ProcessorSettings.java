@@ -7,6 +7,7 @@ import javax.persistence.Id;
 
 /**
  * This class represents the settings for the processor
+ *
  * @author Sam Laureys
  */
 @Entity

@@ -1,8 +1,8 @@
 package be.kdg.simulator.messengers;
 
+import be.kdg.simulator.converters.MessageXmlConverter;
 import be.kdg.simulator.generators.FileGenerator;
 import be.kdg.simulator.model.CameraMessage;
-import be.kdg.simulator.converters.MessageXmlConverter;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -23,4 +23,11 @@ public class FineCalculatorTest {
         double fine = fineCalculator.calculate();
         assertEquals(250, fine, 1e-15);
     }
+
+    @Test
+    public void calculateSpeeding() {
+        double fine = fineCalculator.calculate(100, 50);
+        double expect = (100 - 50) * 2;
+        assertEquals(expect, fine, 1e-15);
+    }
 }

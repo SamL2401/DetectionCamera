@@ -35,7 +35,7 @@ public class ViolationService {
         }
         throw new ViolationException("Violation not found");
     }
-        //TODO optional check
+
     public List<Violation> getViolationsList() throws ViolationException {
         List<Violation> optionalViolationList = violationRepository.findAll();
         if (optionalViolationList.size() > 0)

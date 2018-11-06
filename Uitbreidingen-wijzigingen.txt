@@ -1,0 +1,23 @@
+NIEUWE OVERTREDING TOEVOEGEN:
+* In de package:
+	be.kdg.procesor.detectors.offenses
+	...Offense met als method detect()
+	hierin wordt de offense gedetecteerd en wordt ze doorgestuurd.
+	
+* In de package:
+	be.kdg.procesor.detectors.observers.subscribers
+	kan men een ...OffenseSubscriber toevoegen die luistert naar een CameraMessageEvent
+	en dan de ...Offense detect() aanroept
+	
+	
+NIEUWE BEREKENINGSFACTOEN:
+* In de classe: 
+	be.kdg.procesor.detectors.calculators.FineCalculator
+	een methode toevoegen voor berekening van een boete
+	
+	
+ANDER MEDIUM:
+* In de package:
+	be.kdg.procesor.messages.receivers
+	Zoals de template OtherReceiver
+	met @ConditionalOnProperty(name = "receiver.type", havingValue = "other")

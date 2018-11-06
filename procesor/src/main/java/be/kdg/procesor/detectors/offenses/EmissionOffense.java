@@ -3,6 +3,7 @@ package be.kdg.procesor.detectors.offenses;
 import be.kdg.procesor.detectors.calculators.FineCalculator;
 import be.kdg.procesor.detectors.model.cameras.DetectionCamera;
 import be.kdg.procesor.detectors.model.cars.LicensePlate;
+import be.kdg.procesor.detectors.offenses.buffers.CameraMessageBuffer;
 import be.kdg.procesor.detectors.services.ProxyServiceHandler;
 import be.kdg.procesor.messages.model.messages.CameraMessage;
 import be.kdg.procesor.violations.model.Violation;
@@ -14,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 /**
  * This class is responsible for detecting an emission offense
@@ -28,11 +30,13 @@ public class EmissionOffense {
     private final ProxyServiceHandler proxyServiceHandler;
     private final ViolationService violationService;
     private final FineCalculator fineCalculator;
+    private final CameraMessageBuffer cameraMessageBuffer;
 
-    public EmissionOffense(ProxyServiceHandler proxyServiceHandler, ViolationService violationService, FineCalculator fineCalculator) {
+    public EmissionOffense(ProxyServiceHandler proxyServiceHandler, ViolationService violationService, FineCalculator fineCalculator, CameraMessageBuffer cameraMessageBuffer) {
         this.proxyServiceHandler = proxyServiceHandler;
         this.violationService = violationService;
         this.fineCalculator = fineCalculator;
+        this.cameraMessageBuffer = cameraMessageBuffer;
     }
 
     public void detect(CameraMessage cameraMessage) {
@@ -40,15 +44,14 @@ public class EmissionOffense {
             DetectionCamera camera = proxyServiceHandler.getCamera(cameraMessage.getId());
             LicensePlate licensePlate = proxyServiceHandler.getLicensePlate(cameraMessage.getLicensePlate());
 
-            if (licensePlate.getEuroNumber() < camera.getEuroNorm()) {
-                String type = "emission";
-                Violation violation = new Violation(fineCalculator.calculate(type), type, cameraMessage.getLicensePlate(), cameraMessage.getTimestamp());
-                LOGGER.info("WARNING EURONORM VIOLATION:  " + violation.toString());
+            if (licensePlate.getEuroNumber() < camera.getEuroNorm() && !violationService.getDoubleViolation(cameraMessage.getLicensePlate(), LocalDateTime.now().minusDays(1), LocalDateTime.now(),"emission").isPresent()) {
+                Violation violation = new Violation(fineCalculator.calculate(), "emission", cameraMessage.getLicensePlate(), cameraMessage.getTimestamp());
+                LOGGER.info("EURONORM VIOLATION:  " + violation.toString());
                 violationService.save(violation);
             }
         } catch (CameraNotFoundException | LicensePlateNotFoundException | IOException e) {
-            LOGGER.warn(e.getLocalizedMessage());
+            LOGGER.warn(e.getLocalizedMessage() + " and send to buffer");
+            cameraMessageBuffer.addCameraMessage(cameraMessage);
         }
-        System.out.println(cameraMessage);
     }
 }

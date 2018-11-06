@@ -49,4 +49,6 @@ dependencies {
     compile("org.springframework.boot:spring-boot-configuration-processor")
 
     compile 'javax.xml.bind:jaxb-api:2.3.0'
+    compile("org.springframework.boot:spring-boot-starter-security")
+    testCompile("org.springframework.security:spring-security-test")
 }

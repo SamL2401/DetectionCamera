@@ -20,12 +20,13 @@ public class FineCalculator {
         this.fineCalculatorConfiguration = fineCalculatorConfiguration;
     }
 
-    public double calculate(String type) {
-        double fine = 230;
-        if (type.equals("emission")) {
-            fine = fineCalculatorConfiguration.getEmissionFineFactor();
-            LOGGER.info("emission calculated");
-        }
-        return fine;
+    public double calculate() {
+        LOGGER.info("emission calculated");
+        return fineCalculatorConfiguration.getEmissionFineFactor();
+    }
+
+    public double calculate(float speed, float speedlimit) {
+        LOGGER.info("emission calculated");
+        return (speed - speedlimit) * fineCalculatorConfiguration.getEmissionFineFactor();
     }
 }

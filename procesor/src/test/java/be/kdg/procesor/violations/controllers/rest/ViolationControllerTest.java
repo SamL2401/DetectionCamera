@@ -45,6 +45,5 @@ public class ViolationControllerTest {
                 .andDo(print())
                 .andExpect(jsonPath("$.amount", Matchers.is(20)));
     }
-
-
 }
+

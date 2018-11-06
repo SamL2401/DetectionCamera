@@ -20,6 +20,6 @@ public class SpeedingOffenseSubscriber implements ApplicationListener<CameraMess
 
     @Override
     public void onApplicationEvent(CameraMessageEvent event) {
-        //speedingOffense detect something
+        speedingOffense.detect(event.getCameraMessage());
     }
 }

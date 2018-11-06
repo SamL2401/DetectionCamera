@@ -20,7 +20,7 @@ public class FineCalculatorTest {
 
     @Test
     public void calculate() {
-        double fine = fineCalculator.calculate("emission");
+        double fine = fineCalculator.calculate();
         assertEquals(250, fine, 1e-15);
     }
 }
